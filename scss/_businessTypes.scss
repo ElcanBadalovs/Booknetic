@@ -1,0 +1,120 @@
+@import './function';
+@import './font';
+@import "./color";
+
+
+.busines-type{
+    width: 100%;
+    @include d-flex;
+    flex-direction: column;
+    padding: 0px 16px;
+    margin-bottom: 200px;
+    h1{
+        @include headerText;
+    }
+    h2{
+        @include headerText2;
+        margin-bottom: 32px;
+        @media (min-width: 1024px) {
+            margin-bottom: 42px;
+        }
+    }
+    .type-box{
+        @include d-flex;
+        flex-wrap: wrap;
+        width: 100%;
+        border-radius: 4px;
+        &:not(:last-child){
+            margin-bottom: 8px;
+            @media (min-width: 1024px) {
+                margin-bottom: 24px;
+            }
+        }
+        .type{
+            @include d-flex;
+            flex-direction: column;
+            width: 100%;
+            background-color: aqua;
+            padding: 24px 67px;
+            border-radius: 8px;
+            @media (min-width: 1024px) {
+                width: 30%;
+                height: 100%;
+            }
+            &:not(:last-child){
+                margin-bottom: 8px;
+                @media (min-width: 1024px) {
+                    margin-right: 32px;
+                    margin-bottom: 0
+                }
+            }
+            img{
+                width: 100%;
+            }
+
+            .type-3{
+                width: 60%
+            }
+            .type-5{
+                width: 90%;
+            }
+            .type-7{
+                width: 42%;
+            }
+            .type-8{
+                width: 70%;
+            }
+            p{
+                @include Euclid-400;
+                font-size: 16px;
+                line-height: 24px; 
+                color: $basic-700;
+                text-align: center;
+                margin-bottom: 34px;
+            }
+        }
+    }
+}
+
+.type-box-1{
+    .type{
+        &:nth-child(1){
+            background-color: $danger-100;
+        }
+        &:nth-child(2){
+            background-color: $violet-200; 
+        }
+        &:nth-child(3){
+            background-color: $info-100;
+        }
+    }
+}
+
+.type-box-2{
+    .type{
+        &:nth-child(1){
+            background-color: $success-100;
+        }
+        &:nth-child(2){
+            background-color: $warning-100;
+        }
+        &:nth-child(3){
+            background-color: $danger-100;
+        }
+    }
+}
+
+.type-box-3{
+    .type{  
+        &:nth-child(1){
+            background-color: $violet-100;
+        }
+        &:nth-child(2){
+            background-color: $info-100;
+        }
+        &:nth-child(3){
+            background-color: $success-100;
+        }
+
+    }
+}

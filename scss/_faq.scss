@@ -1,0 +1,72 @@
+@import './function';
+@import './font';
+@import "./color";
+
+*{
+    box-sizing: border-box;
+}
+
+.faq{
+    padding: 14px 16px 64px;
+    margin-bottom: 45px;
+    @media (min-width: 1024px) {
+        background: linear-gradient(180deg, #EDE2FF 0%, #FAECFF 100%);
+        backdrop-filter: blur(50px);
+        padding: 64px 320px;
+    }
+    h1{
+        @include headerText;
+    }
+    h2{
+        @include headerText2;
+        margin-bottom: 48px;
+    }
+
+    
+    .faq-text-section{
+        padding-bottom: 25px;
+        border-bottom: 2px solid $violet-100;
+        &:not(:last-child){
+            margin-bottom: 25px;
+        }
+        .faq-header-text{
+            display: flex;
+            justify-content: space-between;
+            align-items: start;
+            h5{
+                @include Euclid-400;
+                font-size: 16px;
+                line-height: 24px;
+                color: $basic-700;
+                margin-right: 25px;
+            }
+            img{
+                cursor: pointer;
+            }
+            .active{
+                transform: rotate(180deg);
+                transition: .3s ease;
+            }
+        }
+        .faq-answer{
+            display: none;
+            overflow: hidden;
+            margin: 16px 0px 0px 32px;
+            @media (min-width: 1024px) {
+                margin: 24px 106px 0px 0px;
+            }
+            p{
+                @include Euclid-400;
+                font-size: 14px;
+                line-height: 20px;
+                color: $basic-700;
+            }
+        }
+        .show{
+            display: inline-block;
+        }
+    }
+}
+
+
+

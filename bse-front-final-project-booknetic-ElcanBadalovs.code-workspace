@@ -1,0 +1,16 @@
+{
+	"folders": [
+		{
+			"name": "bse-front-final-project-booknetic-ElcanBadalovs",
+			"path": "."
+		},
+		{
+			"name": "linear",
+			"path": "../linear"
+		}
+	],
+	"settings": {
+		"liveServer.settings.multiRootWorkspaceName": "bse-front-final-project-booknetic-ElcanBadalovs",
+		"liveServer.settings.port": 5501
+	}
+}

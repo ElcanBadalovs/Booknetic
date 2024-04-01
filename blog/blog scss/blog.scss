@@ -1,0 +1,180 @@
+@import '../../scss/reset';
+@import '../../scss/font';
+@import '../../scss/color';
+@import '../../scss/function';
+@import '../../scss/nav';
+@import '../../scss/footer';
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+}
+
+body{
+    overflow-x: hidden;
+}
+
+
+
+nav{
+    border-bottom: 2px solid $basic-400;
+    .nav-buttons{
+        background-color: $basic-100 ;
+    }
+}
+
+
+
+.blog{
+    margin-bottom: 40px;
+    padding: 16px 16px 40px 16px;
+    @include d-flex;
+    flex-direction: column;
+    @media (min-width: 1024px) {
+        padding: 25px 112px 56px;
+    }
+    h2{
+        @include headerText2;
+        margin-bottom: 16px;
+    }
+    a{
+        @include headerText2;
+        @media (min-width: 1024px) {
+            font-size: 20px;
+            line-height: 28px;
+        }
+    }
+    p{
+        @include headerText3;
+        width: 97%;
+        margin-bottom: 16px;
+        @media (min-width: 1024px) {
+            margin-bottom: 18px;
+        }
+    }
+    .blog-line{
+        background-color: $violet-500;
+        width: 10%;
+        height: 2px;
+        margin-bottom: 24px;
+        @media (min-width: 1024px) {
+            margin-bottom: 64px;
+        }
+    }
+    .blog-content{
+        width: 100%;
+        .blogs{
+            @include d-flex;
+            flex-wrap: wrap;
+            width: 100%;
+            @media (min-width: 1024px) {
+                flex-wrap: nowrap;
+            }
+            .blog-box{
+                width: 100%;
+                @media (min-width: 1024px) {
+                    margin-bottom: 64px;
+                    width: 30%;
+                }
+                &:not(:last-child){
+                    margin-bottom: 48px;
+                    @media (min-width: 1024px) {
+                        margin-right: 32px;
+                    }
+                }
+                &
+                img{
+                    width: 100%;
+                    margin-bottom: 10px
+                }
+                p{
+                    @include Euclid-400;
+                    font-size: 12px;
+                    line-height: 16px; 
+                    color:  $basic-600;
+                    text-align: left; 
+                }
+                h2{
+                    @include Euclid-400;
+                    font-size: 20px;
+                    line-height: 28px;
+                    color: $basic-700;
+                    text-align: left;
+                }
+            }
+        }
+    }
+}
+
+
+
+
+
+
+
+
+
+
+.pagination{
+    margin-bottom: 80px;
+    @media (min-width: 1024px) {
+        margin-bottom: 109px;
+    }
+    ul{
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        li{
+            @include d-flex;
+            color: $basic-700;
+            list-style: none;
+            line-height: 25.36px;
+            text-align: center;
+            @include Euclid-400;
+            font-size: 16px;
+            cursor: pointer;
+            user-select: none;
+            transition: all 0.3s ease;
+            @media (min-width: 1024px) {
+                font-size: 20px;
+            }
+        }
+        li.numb{
+            list-style: none;
+            padding: 3px 13px;
+            margin: 0 3px;
+            line-height: 45px;
+            border-radius: 8px;
+            &:not(:last-child){
+                margin-right: 10px;
+                margin-left: 10px;
+            }
+        }
+        li.first{
+            margin: 0px 3px 0 -5px;
+        }
+        li.last{
+            margin: 0px -5px 0 3px;
+        }
+        li.dots{
+            font-size: 22px;
+            cursor: default;
+        }
+        li.btn{
+            @include d-flex;
+            padding: 5px;
+            border-radius: 50px;
+        }
+        li.active, 
+        li.numb:hover,
+        li:first-child:hover,
+        li:last-child:hover{
+          color: #fff;
+          background: #705DF2;;
+        }
+    }
+}

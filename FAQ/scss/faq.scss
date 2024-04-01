@@ -1,0 +1,62 @@
+@import '../../scss/nav';
+@import '../../scss/footer';
+@import '../../scss/faq';
+@import '../../scss/font';
+
+
+body{
+    box-sizing: border-box;
+}
+
+*{
+    box-sizing: border-box;
+}
+
+nav{
+    border-bottom: 2px solid $basic-400;
+    .nav-buttons{
+        background-color: #fff !important;
+    }
+}
+
+.faq{
+    background: none;
+    padding: 14px 16px 64px;
+    margin-bottom: 45px;
+    @media (min-width: 1024px) {
+        padding: 64px 320px;
+    }
+    h1{
+        @include headerText;
+    }
+    h2{
+        @include headerText2;
+        margin-bottom: 48px;
+    }
+    .faq-header{
+        @include d-flex;
+    flex-direction: column;
+    h1{
+        @include headerText2;
+        margin-bottom: 16px;
+        @media (min-width: 1024px) {
+            font-size: 24px;
+            line-height: 32px;
+        }
+    }
+    h2{
+        @include headerText3;
+        margin-bottom: 16px;
+    }
+    .faq-line{
+        background-color: $violet-500;
+        width: 30%;
+        height: 2px;
+        margin-bottom: 48px;
+        @media (min-width: 1024px) {
+            width: 10%;
+            margin-bottom: 88px;
+        }
+    }
+    }
+}

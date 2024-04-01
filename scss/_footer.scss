@@ -1,0 +1,189 @@
+@import './function';
+@import './font';
+@import "./color";
+
+*{
+    box-sizing: border-box;
+}
+
+footer{
+    background-color: #0D0659;
+    .footer-header{
+        width: 100%;
+        @include d-flex;
+        flex-direction: column;
+        padding: 56px 16px 24px;
+        @media (min-width: 1024px) {
+            padding: 72px 112px 72px;
+        }
+        h1{
+            @include Euclid-400;
+            font-size: 24px;
+            line-height: 32px;
+            color: $basic-100;
+            text-align: center;
+            margin-bottom: 24px;
+            @media (min-width: 1024px) {
+                font-size: 34px;
+                line-height: 40px;
+                margin-bottom: 32px;
+            }
+        }
+        p{
+            @include Euclid-400;
+            font-size: 16px;
+            line-height: 24px;
+            color: $basic-100;
+            text-align: center;
+            margin-bottom: 40px;
+            @media (min-width: 1024px) {
+                width: 40%;
+                margin-bottom: 48px;
+            }
+        }
+
+        .footer-btn{
+            @include d-flex;
+            width: 100%;
+            padding: 20px 0px;
+            border: none;
+            background-color: $basic-100;
+            border-radius: 16px;
+            @include Euclid-400;
+            font-size: 16px;
+            line-height: 20px;
+            color: $violet-500;
+            cursor: pointer;
+            @media (min-width: 1024px) {
+                width: initial;
+                padding: 20px 40px;
+            }
+            img{
+                margin-left: 6px;
+            }
+        }
+    }
+
+    .footer-line{
+        width: 100%;
+        height: 1px;
+        background: rgba(255, 255, 255, 0.08);
+    }
+
+    .footer-link{
+        padding: 50px 16px 0px;
+        @include d-flex;
+        flex-direction: column;
+        @media (min-width: 1024px) {
+            padding: 56px 112px 72px;
+            flex-direction: row;
+            align-items: start;
+        }
+        .footer-link-logo{
+            margin-bottom: 64px;
+            @media (min-width: 1024px) {
+                margin-bottom: 0;
+            }
+            .logo-box{
+                justify-content: center;
+                @include logo;
+                margin: 0px 0px 16px;
+                @media (min-width: 1024px) {
+                    justify-content: start;
+                    margin-bottom: 32px;
+                }
+                .logo{
+                    width: 40px;
+                    height: 40px;
+                }
+                h1{
+                    font-size: 24px;
+                    color: $basic-100;
+                }
+            }
+            p{
+                display: none;
+                @include Euclid-400;
+                font-size: 16px;
+                line-height: 24px;
+                color: $basic-400;
+                @media (min-width: 1024px) {
+                    display: inline-block;
+                    width: 50%;
+                }
+            }
+        }
+        ul{
+            @include d-flex;
+            flex-direction: column;
+            margin-bottom: 56px;
+            @media (min-width: 1024px) {
+                margin-bottom: 0;
+                justify-content: start;
+                align-items: start;
+                // margin-right: 196px;
+            }
+            &:not(:last-child){
+                @media (min-width: 1024px) {
+                    margin-right: 195px;
+                }
+            }
+            li{
+                margin-bottom: 10px;
+                &:first-child{
+                    @include Euclid-600;
+                    font-size: 20px;
+                    line-height: 28px;
+                    color: $basic-100;
+                    margin-bottom: 32px;
+                }
+                &:not(:first-child){
+                    @include Euclid-400;
+                    font-size: 16px;
+                    line-height: 24px;
+                    margin-bottom: 16px;
+                }
+
+                a{
+                    color: $basic-400;
+                }
+            }
+        }
+    }
+
+    .footer-end{
+        padding: 32px 16px 24px;
+        @media (min-width: 1024px) {
+            padding: 24px 112px 26px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .footer-end-text{
+            order: 1;
+            @include d-flex;
+            color: $basic-400;
+            i{
+                font-size: 18px;
+                margin: 10px;
+            }
+            p{
+                @include Euclid-400;
+                font-size: 14px;
+                line-height: 20px;
+            }
+        }
+        .footer-social{
+            @include d-flex;
+            margin-bottom: 40px;
+            @media (min-width: 1024px) {
+                margin-bottom: 0px;
+            }
+            a{
+                &:not(:last-child){
+                    margin-right: 20px;
+                }
+            }
+        }
+    }
+}

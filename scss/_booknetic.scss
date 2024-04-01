@@ -1,0 +1,164 @@
+@import './color';
+@import './font';
+@import './function';
+
+*{
+    box-sizing: border-box;
+}
+.booknetic{
+    position: relative;
+    background-color: $violet-500;
+    padding: 64px 40px 260px;
+    @media (min-width: 1024px) {
+        display: flex;
+        justify-content: center;
+        padding: 80px 112px 30px;
+    }
+    h1{
+        @include headerText;
+        color: $basic-100;
+        @media (min-width: 1024px) {
+            text-align: left;
+        }
+    }
+    h2{
+        @include headerText2;
+        color: $basic-100;
+        margin-bottom: 56px;
+        @media (min-width: 1024px) {
+            text-align: left;
+            margin-bottom: 32px;
+            width: 90%;
+        }
+    }
+    h4{
+        @include headerText3;   
+        color: $basic-100;
+        text-align: left;
+        width: 65%;
+        display: none;
+        @media (min-width: 1024px){
+            display: inline-block;
+        }
+    }
+    .booknetic-header1{
+        @media (min-width: 1024px) {
+            display: none;
+        }
+    }
+
+    .booknetic-header2{
+        display: none;
+        @media (min-width: 1024px) {
+            display: inline-block;
+            margin-top: 120px;
+        }
+    }
+
+
+
+
+    .swiper-container{
+        @media (min-width: 1024px) {
+            margin-right: 115px;
+            margin-bottom: 90px;
+        }
+        .swiper-wrapper{
+            width: 40vw;
+            @media (min-width: 1024px) {
+                  display: grid;
+                  grid-template-columns: repeat(2, 1fr);
+                  grid-template-rows: repeat(2, 1fr);
+                  gap: 20px;
+                  
+            }
+            .swiper-slide {
+                position: relative;
+                text-align: center;
+                display: flex;
+                justify-content: center;
+                padding-top: 80px;
+                width: 280px;
+                height: 440px;
+                .slide-logo{
+                    position: absolute;
+                    top: 10px;
+                    padding:  20px;
+                    background: linear-gradient(180deg, rgba(255, 255, 255, 0.2) 32.81%, rgba(0, 0, 0, 0.02) 100%), linear-gradient(180deg, #6683E7 0%, #4968D7 100%);
+                    background-blend-mode: soft-light, normal;
+                    box-shadow: inset -0.74921px -0.74921px 0.74921px rgba(0, 0, 0, 0.05), inset 0.74921px 0.74921px 0.74921px rgba(255, 255, 255, 0.2);
+                    border-radius: 20.8696px;
+                    
+                    .slide-img{
+                        width: 80%;
+                    }
+                }
+
+                .slide-logo.Union{
+                    background: linear-gradient(180deg, rgba(255, 255, 255, 0.2) 32.81%, rgba(0, 0, 0, 0.02) 100%), linear-gradient(180deg, #FFA25F 0%, #FFA458 100%);
+                    background-blend-mode: soft-light, normal;
+                    box-shadow: inset -0.749209px -0.749209px 0.749209px rgba(0, 0, 0, 0.05), inset 0.749209px 0.749209px 0.749209px rgba(255, 255, 255, 0.2);
+                }
+                .slide-logo.test{
+                    background: linear-gradient(180deg, rgba(255, 255, 255, 0.2) 32.81%, rgba(0, 0, 0, 0.02) 100%), linear-gradient(180deg, #8FDEA5 0%, #89E2B7 100%);
+                    background-blend-mode: soft-light, normal;
+                    box-shadow: inset -0.749209px -0.749209px 0.749209px rgba(0, 0, 0, 0.05), inset 0.749209px 0.749209px 0.749209px rgba(255, 255, 255, 0.2);
+                }
+                .slide-logo.untitled{
+                    background: linear-gradient(180deg, rgba(255, 255, 255, 0.2) 32.81%, rgba(0, 0, 0, 0.02) 100%), linear-gradient(180deg, #E2BDFF 0%, #DBB0FD 100%);
+                    background-blend-mode: soft-light, normal;
+                    box-shadow: inset -0.749209px -0.749209px 0.749209px rgba(0, 0, 0, 0.05), inset 0.749209px 0.749209px 0.749209px rgba(255, 255, 255, 0.2);
+                }
+                .slide-box{
+                    background-color: #FFF;
+                    border-radius: 24px;
+                    padding: 80px 30px 34px;
+                    
+                    h3{
+                        @include headerText4;
+                        margin-bottom: 24px;
+                    }
+                    p{
+                        @include headerText3;
+                    }
+                }
+              }
+              .swiper-slide2, .swiper-slide4{
+                @media (min-width: 1024px) {
+                    margin-top: 60px;
+                    margin-left: 30px;
+                }
+              }
+              .swiper-slide4{
+                @media (min-width: 1024px) {
+                    margin-top: 60px;
+                    // margin-bottom: 30px;
+                }
+              }
+        }
+        .swiper-button-next,
+        .swiper-button-prev {
+          display: none;
+        }
+    }
+
+    .booknetic-icon1{
+        position: absolute;
+        bottom: 15%;
+        right: 15%;
+        @media (min-width: 1024px) {
+            bottom: 39%;
+            right: 25%;
+        }
+    }
+    .booknetic-icon2{
+        position: absolute;
+        bottom: 8%;
+        left: 15%;
+        @media (min-width: 1024px) {
+            bottom: 18%;
+            right: 38%;
+            left: initial;
+        }
+    }
+}

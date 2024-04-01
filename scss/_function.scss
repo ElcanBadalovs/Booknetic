@@ -1,0 +1,106 @@
+@import './color';
+@import './font';
+@mixin d-flex{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@mixin headerText{
+    @include Euclid-400;
+    font-size: 16px;
+    line-height: 24px;
+    color: $danger-400;
+    text-align: center;
+    margin-bottom: 16px;
+}
+
+@mixin headerText2{
+    @include Euclid-600;
+    font-size: 20px;
+    line-height: 28px;
+    color: $basic-700;
+    text-align: center;
+    @media (min-width: 1024px) {
+        font-size: 48px;
+        line-height: 64px;
+    }
+}
+
+@mixin headerText3{
+    text-align: center;
+    @include Euclid-400;
+    font-size: 14px;
+    line-height: 20px;
+    color: $basic-700;
+}
+
+@mixin headerText4{
+    @include Euclid-400;
+    font-size: 20px;
+    line-height: 28px;
+    color: $basic-700;
+    text-align: center;
+}
+
+
+@mixin logo{
+    margin-right: 54px;
+    display: flex;
+    align-items: center;
+    @media (min-width: 1024px) {
+        margin-right: 120px;
+    }
+    .logo{
+        margin-right: 8px;
+        width: 20px;
+        height: 20px;
+        @media (min-width: 1024px) {
+            width: 20px;
+            height: 20px;
+        }
+        .logo-1{
+            width: 65%;
+            height: 45%;
+            background-color: $danger-400;
+            border-radius: 4px 8px 8px 0px;
+        }
+        .logo-2{
+            width: 85%;
+            height: 60%;
+            background-color: $violet-500;
+            border-radius: 0px 11px 11px 4px;
+        }
+    }
+    h1{
+        @include Euclid-400;
+        font-size: 16px;
+        line-height: 21px;
+        color: $basic-700;
+        @media (min-width: 1024px) {
+            font-size: 24px;
+            line-height: 32px;
+        }
+    }
+}
+
+
+// features
+@mixin order{
+    @media (min-width: 1024px) {
+        order: 2;
+        margin-bottom: 0;
+        margin-left: 132px;
+    }
+}
+
+@mixin f-margin{
+    margin-bottom: 0;
+    margin-right: 132px;
+}
+
+@mixin f-shadow{
+    background: #FFFFFF;
+    box-shadow: 0px 16px 80px rgba(112, 93, 242, 0.08);
+    border-radius: 8px;
+}

@@ -1,0 +1,27 @@
+@import './reset';
+@import './nav';
+@import './header';
+@import './booknetic';
+@import './font';
+@import './group1';
+@import './integrations';
+@import './features';
+@import './testiomonials';
+@import './businessTypes';
+@import './faq';
+@import './customers';
+@import './footer';
+@import './color';
+
+body{
+    overflow-x: hidden;
+}
+
+
+
+.nav-section{
+    display: flex;
+}
+
+
+

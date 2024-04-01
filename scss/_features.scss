@@ -1,0 +1,273 @@
+@import './function';
+@import './font';
+@import "./color";
+
+
+// *{
+//     box-sizing: border-box;
+// }
+
+.features{
+    width: 100%;
+    padding: 55px 16px 72px;
+    @media (min-width: 1024px) {
+        position: relative;
+        @include d-flex;
+        flex-direction: column;
+        padding: 88px 112px 80px;
+    }
+
+    .cub{
+        display: none;
+        @media (min-width:1024px) {
+            display: inline-block;
+            position: absolute;
+            top: 177px;
+            right: 102px;
+        }
+    }
+
+    h1{
+        @include headerText;
+    }
+    h2{
+        text-align: center;
+        margin-bottom: 16px;
+        @include Euclid-600;
+        font-size: 20px;
+        line-height: 28px;
+        color: $basic-700;
+        @media (min-width: 1024px) {
+            font-size: 48px;
+            line-height: 64px;
+            margin-bottom: 24px;       
+        }
+    }
+    h4{
+        @include headerText3;
+        margin-bottom: 48px;
+        @media (min-width: 1024px) {
+            width: 44%;
+            margin-bottom: 112px;       
+        }
+    }
+    .features-box{
+        width: 100%;
+        @include d-flex;
+        flex-wrap: wrap;
+        @media (min-width: 1024px) {
+            justify-content: space-between;
+            flex-wrap: nowrap;
+        }
+        &:not(:last-child){
+            margin-bottom: 80px;
+            @media (min-width: 1024px){
+                margin-bottom: 140px;
+            }
+        }
+        &:last-child{
+            margin-bottom: 72px;
+            @media (min-width: 1024px) {
+                margin-bottom: 124px;
+            }
+        }
+        .features-img{
+            position: relative;
+            width: 100%;
+            @include f-shadow;
+            margin-bottom: 32px;
+            @media (min-width: 1024px) {
+                width: 45%;
+                @include f-margin;
+            }
+            .f-image{
+                position: relative;
+                width: 70%;
+                z-index: 1;
+            }
+            .f-image2{
+                position: absolute;
+                width: 40%;
+                bottom: 0;
+                right: 0;
+            }
+        }
+
+        .features-image-2{
+            width: 100%;
+            padding: 8px;
+            @include f-shadow;
+            margin-bottom: 32px;
+            @media (min-width: 1024px) {
+                width: 50%;
+                @include order;
+            }
+            img{
+                width: 100%;
+            }
+        }
+
+        .features-image-3{
+            width: 100%;
+            @include d-flex;
+            @include f-shadow;
+            margin-bottom: 32px;
+            @media (min-width: 1024px) {
+                width: 45%;
+                @include f-margin;
+            }
+            img{
+                width: 100%;
+                border-radius: 8px;
+            }
+        }
+
+        .features-image-4{
+            position: relative;
+            width: 100%;
+            @include f-shadow;
+            padding-bottom: 54px;
+            margin-bottom: 32px;
+            @media (min-width: 1024px) {
+                width: 50%;
+                @include order;
+                margin-bottom: 78px;
+            }
+            .features-phone{
+                width: 40%;
+                position: absolute;
+                bottom: 13px;
+                right: 24px;
+            }
+        }
+
+        .features-image-5{
+            width: 100%;
+            @include d-flex;
+            @include f-shadow;
+            margin-bottom: 32px;
+            @media (min-width: 1024px) {
+                width: 45%;
+                @include f-margin;
+            }
+            img{
+                width: 100%;
+                border-radius: 8px;
+            }
+        }
+
+        .features-text{
+            width: 100%;
+            @media (min-width: 1024px) {
+                width: 50%;   
+            }
+            h3{
+                @include Euclid-600;
+                font-size: 24px;
+                line-height: 32px;
+                color: $basic-700;
+                margin-bottom: 16px;
+                @media (min-width: 1024px) {
+                    font-size: 34px;
+                    line-height: 40px;
+                    margin-bottom: 32px;
+                }
+            }
+            p{
+                @include headerText3;
+                text-align: left;
+                margin-bottom: 24px;
+                @media (min-width: 1024px) {
+                margin-bottom: 32px;
+                }
+            }
+            .features-btn{
+                @include d-flex;
+                background: #5343D0;
+                border-radius: 50px;
+                @include headerText3;
+                border: none;
+                padding: 14px 32px;
+                color: $basic-100;
+                cursor: pointer;
+                img{
+                    margin-left: 15px;
+                }
+            }
+        }
+        .features-text-1{
+            h3{
+                @media (min-width: 1024px) {
+                    width: 60%;
+                }
+            }
+            p{
+                @media (min-width: 1024px) {
+                    width: 77%;
+                }
+            }
+        }
+        .features-text-2{
+            h3{
+                @media (min-width: 1024px) {
+                    width: 60%;
+                }
+            }
+            p{
+                @media (min-width: 1024px) {
+                    width: 80%;
+                }
+            }
+        }
+        .features-text-3{
+            h3{
+                @media (min-width: 1024px) {
+                    width: 60%;
+                }
+            }
+            p{
+                @media (min-width: 1024px) {
+                    width: 75%;
+                }
+            }
+        }
+        .features-text-4{
+            h3{
+                @media (min-width: 1024px) {
+                    width: 60%;
+                }
+            }
+            p{
+                @media (min-width: 1024px) {
+                    width: 80%;
+                }
+            }
+        }
+        .features-text-5{
+            h3{
+                @media (min-width: 1024px) {
+                    width: 60%;
+                }
+            }
+            p{
+                @media (min-width: 1024px) {
+                    width: 75%;
+                }
+            }
+        }
+    }
+    .features-btn1{
+        @include d-flex;
+        background: #FFFFFF;
+        border: 1px solid $violet-500;
+        border-radius: 50px;
+        @include headerText3;
+        color: $violet-500;
+        width: 100%;
+        padding: 14px 0px;
+        @media (min-width: 1024px) {
+            width: initial;
+            padding: 14px 32px;
+        }
+    }
+}

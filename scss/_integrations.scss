@@ -1,0 +1,135 @@
+.integrations{
+
+    h1{
+        color: black;
+        @include headerText;
+    }
+    h2{
+        @include headerText2;
+        margin-bottom: 40px;
+        @media (min-width: 1024px) {
+            margin-bottom: 64px;
+        }
+    }
+
+    .owl-carousel{
+        @media (min-width: 1024px) {
+            display: none;
+        }
+        .owl-slide{
+            height: 432px;
+            background: #FFFFFF;
+            box-shadow: 0px 16px 48px rgba(59, 46, 174, 0.08);
+            border-radius: 24px;
+            padding: 24px 24px 48px;
+            margin-left: 20px;
+            margin-bottom: 30px;
+            &:nth-child(odd){
+                margin-right: 20px;
+            }
+    
+            img{
+                width: 20% !important;
+                border-radius: 16px;
+                padding: 12px;
+                margin-bottom: 32px;
+            }
+    
+            .owl-1{
+                background-color: #00D6D6;
+            }
+    
+            .owl-2{
+                background-color: $warning-500;
+            }
+    
+            .owl-3{
+                background-color: $danger-500;
+            }
+    
+            .owl-4{
+                background-color: $violet-400;
+            }
+    
+            h1{
+                @include headerText4;
+                text-align: left;
+                margin-bottom: 24px;
+            }
+            p{
+                @include headerText3;
+                color: $basic-700;
+                text-align: left;
+            }
+        }
+        .owl-dots{
+            button{
+                span{
+                    background-color: $violet-100 !important;
+                }
+            }
+            button.active{
+                span{
+                    background-color: $violet-500 !important;
+                }
+            }
+        }
+    }
+
+    .card-slider{
+        display: none;
+        @media (min-width: 1024px) {
+            @include d-flex;
+            flex-direction: column;
+            margin-bottom: 120px;
+        }
+        .card-container{
+            @include d-flex;
+            &:not(:last-child){
+                margin-bottom: 40px;
+            }
+            .card-box{
+                width: 29%;
+                height: 332px;
+                background: #FFFFFF;
+                box-shadow: 0px 16px 48px rgba(59, 46, 174, 0.08);
+                border-radius: 24px;
+                padding: 24px 24px 48px;
+                text-align: left;
+                &:not(:last-child){
+                    margin-right: 32px;
+                }
+                img{
+                    border-radius: 16px;
+                    padding: 12px;
+                    margin-bottom: 32px;
+                }
+            
+                .owl-1{
+                    background-color: #00D6D6;
+                }
+            
+                .owl-2{
+                    background-color: $warning-500;
+                }
+            
+                .owl-3{
+                    background-color: $danger-500;
+                }
+            
+                .owl-4{
+                    background-color: $violet-400;
+                }
+                h1{
+                    @include headerText4;
+                    margin-bottom: 24px;
+                    text-align: left
+                }
+                p{
+                    @include headerText3;
+                    text-align: left;
+                }
+            }
+        }
+    }
+}
